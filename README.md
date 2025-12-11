@@ -1,9 +1,9 @@
-🐾 Backend III – Pre-Entrega Nº1
+# *🐾 Backend III – Pre-Entrega Nº1*
 
 Autora: María Fernanda Moreno
 Curso: Backend III – Testing y Escalabilidad - CODERHOUSE -
 
-📌 Descripción General
+### 📌 Descripción General
 
 Este proyecto implementa la Pre-Entrega Nº1 del curso Backend III de Coderhouse.
 El objetivo es incorporar un sistema de Mocking para generar datos falsos, exponerlos mediante endpoints y permitir la inserción masiva de usuarios y mascotas dentro de una base MongoDB.
@@ -20,11 +20,12 @@ Inserción masiva configurable desde un endpoint POST
 
 Verificación de los datos insertados mediante endpoints reales
 
+### 📂 Estructura del Proyecto
 
 <img width="386" height="545" alt="image" src="https://github.com/user-attachments/assets/44dea1b9-4e11-49fa-8f5d-f06723c6eeb4" />
 
 
-⚙️ Configuración del Entorno
+### ⚙️ Configuración del Entorno
 
 Instalar dependencias:
 
@@ -35,51 +36,51 @@ Iniciar el servidor:
 
 npm run dev
 
-🧪 Módulos de Mocking
-1. Mocking de Usuarios
+### 🧪 Módulos de Mocking
+
+##### 1. Mocking de Usuarios
 
 Archivo: src/mocks/mockingUsers.js
 
 Cada usuario generado incluye:
 
-_id (ObjectId)
+- _id (ObjectId)
 
-first_name, last_name
+- first_name, last_name
 
-email
+- email
 
-password → contraseña hasheada (coder123)
+- password → contraseña hasheada (coder123)
 
-role (user o admin)
+- role (user o admin)
 
-pets: array vacío
+- pets: array vacío
 
-2. Mocking de Mascotas
+###### 2. Mocking de Mascotas
 
 Archivo: src/mocks/mockingPets.js
 
 Cada mascota incluye:
 
-_id
+- _id
 
-name
+- name
 
-specie
+- specie
 
-birthDate
+- birthDate
 
-adopted (false)
+- adopted (false)
 
-owner (null)
+- owner (null)
 
-image (null)
+- image (null)
 
-📡 Endpoints del Router /api/mocks
+### 📡 Endpoints del Router /api/mocks
 
 El router fue creado en:
 
 src/routes/mocks.router.js
-
 
 Y montado en:
 
@@ -120,7 +121,7 @@ Respuesta:
   }
 }
 
-🔍 Verificación de Inserción en DB
+### 🔍 Verificación de Inserción en DB
 
 ✔ GET /api/users
 
@@ -132,7 +133,7 @@ Devuelve las mascotas insertadas.
 
 También se verificó mediante MongoDB Compass, visualizando las colecciones users y pets.
 
-✔ Checklist de Consigna Requisito Cumplido:
+### ✔ Checklist de Consigna Requisito Cumplido:
 
 - Crear router mocks bajo /api/mocks	✔
 - Migrar /mockingpets al nuevo router	✔
